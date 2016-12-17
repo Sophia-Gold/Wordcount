@@ -7,7 +7,7 @@ Although this simple verison uses `Writer` and `State` monads and reports monoid
 It runs as a command line tool like so:
 
 ```
-> ./Wordcount "This is a test, this is only a test"
+> ./Wordcount "This is a test, this is only a test."
 1
 9
 36
