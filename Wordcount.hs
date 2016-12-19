@@ -43,6 +43,8 @@ wc c = fst $ execState (wcm c) (0, False)
 main :: IO ()
 main = do
   contents <- getContents
-  print $ lc contents
-  print $ wc contents
-  print $ cc contents
+  args <- getArgs
+  let text = case args of 
+               [] -> contents
+               _  -> args !! 0
+  mapM_ (putStrLn . ($ text)) $ [show . lc, show . wc, show . cc] 

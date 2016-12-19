@@ -8,7 +8,12 @@ It runs as a command line tool like so:
 
 ```
 > ./Wordcount "This is a test, this is only a test."
-1
+0
 9
 36
+
+> cat haiku.txt | ./Wordcount
+3
+14
+84
 ```
